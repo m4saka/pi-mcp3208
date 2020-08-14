@@ -32,7 +32,7 @@ int main()
         {
             std::cout
                 << "CH" << i << ": " << mcp3208.voltageAt(i) << " [V]"
-                << " (Raw:" << mcp3208.rawValueAt(i) << ")\n";
+                << " (Raw:" << static_cast<int>(mcp3208.rawValueAt(i)) << ")\n";
         }
         std::cout << std::flush;
 
