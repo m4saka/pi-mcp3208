@@ -36,7 +36,7 @@ MCP3208::MCP3208(int spiChannel, int pinCs, double vRef)
     if (!m_spiInitialized)
     {
         // SPI通信の初期化に失敗した場合は何もせず0を返す
-        m_values.fill(0.0);
+        m_rawValues.fill(0);
         return;
     }
 
