@@ -26,7 +26,7 @@ public:
     // コンストラクタ
     //  - spiChannel: SPIのチャンネル番号(0または1)
     //  - pinCs: CS(チップセレクト)のピン番号
-    //  - 基準電圧(MCP3208のV_refピンに入力している電圧, V単位)
+    //  - vRef: 基準電圧(MCP3208のV_refピンに入力している電圧, V単位)
     MCP3208(int spiChannel, int pinCs, double vRef);
     ~MCP3208() = default;
 
