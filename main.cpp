@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip> // std::fixed, std::setprecision
+#include <vector>
 #include <cstdlib> // std::system
 #include <wiringPi.h>
 #include "mcp3208.hpp"
