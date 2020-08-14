@@ -21,7 +21,7 @@ These settings can be modified by editing `main.cpp`.
     - CS(CH1): 7
 
 ## Usage
-Note: Make sure to enable SPI features in `raspi-config` before using.
+Note: Make sure to enable SPI features in `raspi-config` before using this application.
 ```
 $ ./rpi_mcp3208
 ```
@@ -48,3 +48,6 @@ $ ./rpi_mcp3208
   CH6: 0.0000 [V] (Raw:0)
   CH7: 0.0000 [V] (Raw:0)
   ```
+
+## License
+Public Domain (Unlicense)
