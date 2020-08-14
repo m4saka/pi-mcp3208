@@ -70,7 +70,7 @@ void MCP3208::update()
     }
 }
 
-unsigned char MCP3208::rawValueAt(int ch) const
+int MCP3208::rawValueAt(int ch) const
 {
     return m_rawValues[ch];
 }

@@ -20,7 +20,7 @@ private:
     const bool m_spiInitialized;
 
     // 前回update時の値
-    std::array<double, CH_COUNT> m_rawValues;
+    std::array<int, CH_COUNT> m_rawValues;
 
 public:
     // コンストラクタ
@@ -34,7 +34,7 @@ public:
     void update();
 
     // 指定された入力チャンネルの生の値を取得
-    unsigned char rawValueAt(int ch) const;
+    int rawValueAt(int ch) const;
 
     // 指定された入力チャンネルの電圧値(V単位)を取得
     double voltageAt(int ch) const;
