@@ -80,3 +80,8 @@ double MCP3208::voltageAt(int ch) const
     // 値を基準電圧でスケーリングして返す
     return static_cast<double>(m_rawValues[ch]) * m_vRef / RAW_VALUE_REF;
 }
+
+int MCP3208::spiChannel() const
+{
+    return m_spiChannel;
+}

@@ -38,4 +38,7 @@ public:
 
     // 指定された入力チャンネルの電圧値(V単位)を取得
     double voltageAt(int ch) const;
+
+    // SPIのチャンネル番号を取得
+    int spiChannel() const;
 };
