@@ -8,13 +8,10 @@ $ cd rpi-mcp3208
 $ make
 ```
 
-## Usage
-Note: Make sure to enable SPI features in `raspi-config` before using.
-```
-$ ./rpi_mcp3208
-```
+## Settings
+These settings can be modified by editing `main.cpp`.
 
-- Vref: 3.3 V
+- V_ref: 3.3 V
 
 - Pin number (BCM):
     - CLK: 11
@@ -22,6 +19,12 @@ $ ./rpi_mcp3208
     - DOUT: 9
     - CS(CH0): 8
     - CS(CH1): 7
+
+## Usage
+Note: Make sure to enable SPI features in `raspi-config` before using.
+```
+$ ./rpi_mcp3208
+```
 
 - Example:
   ```
