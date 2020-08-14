@@ -34,7 +34,7 @@ int main()
     std::vector<MCP3208> mcp3208s;
     for (int channel = 0; channel < SPI_CHANNEL_COUNT; ++channel)
     {
-        mcp3208s.emplace_back(i, PIN_CS, V_REF);
+        mcp3208s.emplace_back(channel, PIN_CS, V_REF);
     }
 
     // 出力を小数点以下4桁にする
