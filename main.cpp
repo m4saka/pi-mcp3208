@@ -30,7 +30,9 @@ int main()
         std::system("clear");
         for (int i = 0; i < 8; ++i)
         {
-            std::cout << "CH" << i << ": " << mcp3208.voltageAt(i) << " [V]\n";
+            std::cout
+                << "CH" << i << ": " << mcp3208.voltageAt(i) << " [V]"
+                << " (Raw:" << mcp3208.rawValueAt(i) << ")\n";
         }
         std::cout << std::flush;
 
