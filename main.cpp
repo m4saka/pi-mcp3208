@@ -60,8 +60,8 @@ int main()
             std::cout << std::endl;
         }
 
-        // 1秒待機
-        delay(1000);
+        // 0.5秒待機
+        delay(500);
     }
 
     return 0;
