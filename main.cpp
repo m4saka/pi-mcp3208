@@ -57,8 +57,9 @@ int main()
         {
             std::cout << "<< SPI Channel " << mcp3208.spiChannel() << " >>\n";
             displayValues(mcp3208);
-            std::cout << std::endl;
+            std::cout << '\n';
         }
+        std::cout << std::flush;
 
         // 0.5秒待機
         delay(500);
