@@ -10,10 +10,7 @@ private:
     // SPIのチャンネル番号(0または1)
     const int m_spiChannel;
 
-    // ピン番号(BCM)
-    const int m_pinClk;
-    const int m_pinDin;
-    const int m_pinDout;
+    // CS(チップセレクト)のピン番号
     const int m_pinCs;
 
     // 基準電圧(V単位)
