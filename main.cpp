@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip> // std::fixed, std::setprecision
+#include <array>
 #include <vector>
 #include <cstdlib> // std::system
 #include <wiringPi.h>
@@ -27,14 +28,16 @@ int main()
     }
 
     constexpr int SPI_CHANNEL_COUNT = 2; // SPI通信のチャンネルの個数
-    constexpr int PIN_CS = 8;            // CS(チップセレクト)のピン番号
     constexpr double V_REF = 3.3;        // V_refピンに入力している基準電圧(V単位)
+
+    // SPI通信のチャンネルごとのCS(チップセレクト)のピン番号
+    const std::array<int, SPI_CHANNEL_COUNT> pinsCs = { 8, 7 };
 
     // MCP3208のインスタンスをSPI通信のチャンネルごとに生成
     std::vector<MCP3208> mcp3208s;
     for (int channel = 0; channel < SPI_CHANNEL_COUNT; ++channel)
     {
-        mcp3208s.emplace_back(channel, PIN_CS, V_REF);
+        mcp3208s.emplace_back(channel, pinsCs[channel], V_REF);
     }
 
     // 出力を小数点以下4桁にする
