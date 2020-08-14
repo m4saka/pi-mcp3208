@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip> // std::fixed, std::setprecision
 #include <cstdlib> // std::system
 #include <wiringPi.h>
 #include "mcp3208.hpp"
@@ -17,6 +18,10 @@ int main()
 
     MCP3208 mcp3208(SPI_CHANNEL, PIN_CS, V_REF);
 
+    // 出力を小数点以下4桁にする
+    std::cout << std::fixed << std::setprecision(4);
+
+    // 現在の電圧値を連続表示
     while (true)
     {
         mcp3208.update();
@@ -25,8 +30,9 @@ int main()
         std::system("clear");
         for (int i = 0; i < 8; ++i)
         {
-            std::cout << "CH" << i << ": " << mcp3208.voltageAt(i) << " [V]" << std::endl;
+            std::cout << "CH" << i << ": " << mcp3208.voltageAt(i) << " [V]\n";
         }
+        std::cout << std::flush;
 
         // 1秒待機
         delay(1000);
