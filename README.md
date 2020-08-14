@@ -14,6 +14,8 @@ Note: Make sure to enable SPI features in `raspi-config` before using.
 $ ./rpi_mcp3208
 ```
 
+- Vref: 3.3 V
+
 - Pin number (BCM):
     - CLK: 11
     - DIN: 10
