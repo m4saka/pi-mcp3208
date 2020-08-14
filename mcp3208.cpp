@@ -61,7 +61,7 @@ void MCP3208::update()
         buffer[0] = (ch >> 2) | 0b00000110;
         buffer[1] = (ch << 6);
         buffer[2] = 0b00000000;
-        wiringPiSPIDataRW(SPI_CHANNEL, buffer, 3);
+        wiringPiSPIDataRW(m_spiChannel, buffer, 3);
 
         // 配列の値を更新
         m_rawValues[ch] = ((0b00001111 & buffer[1]) << 8) | buffer[2];
