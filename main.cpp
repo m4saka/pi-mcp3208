@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cstdlib> // std::system
+#include <wiringPi.h>
 #include "mcp3208.hpp"
 
 int main()
@@ -24,7 +25,7 @@ int main()
         std::system("clear");
         for (int i = 0; i < 8; ++i)
         {
-            std::cout << "CH" << i << ": " << mcp3208.get(i) << " [V]" << std::endl;
+            std::cout << "CH" << i << ": " << mcp3208.voltageAt(i) << " [V]" << std::endl;
         }
 
         // 1秒待機

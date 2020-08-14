@@ -5,7 +5,7 @@ class MCP3208
 {
 private:
     // 入力チャンネル(CH0～7)の個数
-    constexpr int CH_COUNT = 8;
+    static constexpr int CH_COUNT = 8;
 
     // SPIのチャンネル番号(0または1)
     const int m_spiChannel;

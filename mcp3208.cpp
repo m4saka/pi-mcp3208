@@ -1,3 +1,5 @@
+#include "mcp3208.hpp"
+#include <iostream>
 #include <wiringPi.h>
 #include <wiringPiSPI.h>
 
@@ -16,7 +18,7 @@ namespace
     // SPI通信を初期化
     bool initSpi(int channel)
     {
-        if (wiringPiSPISetup(spiChannel, SPI_CLOCK_SPEED) == -1)
+        if (wiringPiSPISetup(channel, SPI_CLOCK_SPEED) == -1)
         {
             std::cerr << "Error: Failed to initialize SPI\n";
             return false;
