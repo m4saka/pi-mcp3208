@@ -14,6 +14,13 @@ Note: Make sure to enable SPI features in `raspi-config` before using.
 $ ./rpi_mcp3208
 ```
 
+- Pin number (BCM):
+    - CLK: 11
+    - DIN: 10
+    - DOUT: 9
+    - CS(CH0): 8
+    - CS(CH1): 7
+
 - Example:
   ```
   << SPI Channel 0 >>
