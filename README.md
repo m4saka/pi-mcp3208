@@ -1,5 +1,5 @@
 # rpi-mcp3208
-MCP3208 A/D converter imprementation for Raspberry Pi using wiringPi
+MCP3208 A/D converter implementation for Raspberry Pi using wiringPi
 
 ## Compilation
 ```
